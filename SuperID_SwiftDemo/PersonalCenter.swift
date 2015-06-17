@@ -265,7 +265,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
         if (segue.identifier == "ShowFaceInfo") {
             let faceInfoView : FaceInfoController = segue.destinationViewController as! FaceInfoController
             if((sender) != nil){
-                faceInfoView.receiveData = sender as! Dictionary<String,Int>
+                faceInfoView.receiveData = sender as! [String: AnyObject]
             }
         }
     }
