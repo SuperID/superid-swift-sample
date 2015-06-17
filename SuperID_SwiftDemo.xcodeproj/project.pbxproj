@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB14D5591A7B58450065EFD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14D5581A7B58450065EFD7 /* AppDelegate.swift */; };
+		CB14D55B1A7B58450065EFD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14D55A1A7B58450065EFD7 /* ViewController.swift */; };
+		CB14D55E1A7B58450065EFD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB14D55C1A7B58450065EFD7 /* Main.storyboard */; };
+		CB14D5601A7B58450065EFD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB14D55F1A7B58450065EFD7 /* Images.xcassets */; };
+		CB14D56F1A7B58450065EFD7 /* SuperID_SwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14D56E1A7B58450065EFD7 /* SuperID_SwiftDemoTests.swift */; };
+		CB14D5CE1A7B5D7E0065EFD7 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB14D5CD1A7B5D7E0065EFD7 /* libc++.dylib */; };
+		CB14D5D01A7B5D870065EFD7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB14D5CF1A7B5D870065EFD7 /* AVFoundation.framework */; };
+		CB14D5D21A7B5D920065EFD7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB14D5D11A7B5D920065EFD7 /* CoreTelephony.framework */; };
+		CB14D5D41A7B5DAF0065EFD7 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB14D5D31A7B5DAF0065EFD7 /* CoreMedia.framework */; };
+		CB14D6161A7B7DB00065EFD7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB14D6151A7B7DB00065EFD7 /* LaunchScreen.xib */; };
+		CB14D6201A7B7F690065EFD7 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB14D61F1A7B7F690065EFD7 /* MBProgressHUD.m */; };
+		CB14D6241A7B82530065EFD7 /* CONFIG.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14D6231A7B82530065EFD7 /* CONFIG.swift */; };
+		CB1992861A80CFEB00AF2A96 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1992851A80CFEB00AF2A96 /* ProfileCell.swift */; };
+		CB1992881A80D06900AF2A96 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1992871A80D06900AF2A96 /* MainCell.swift */; };
+		CB19928A1A80D08F00AF2A96 /* LogoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1992891A80D08F00AF2A96 /* LogoutCell.swift */; };
+		CB19928C1A80D21700AF2A96 /* PersonalCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19928B1A80D21700AF2A96 /* PersonalCenter.swift */; };
+		CB1E1D531A8072000085C939 /* MacroDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1E1D521A8072000085C939 /* MacroDefinition.swift */; };
+		CB8EA1B51AD3DDE20026E85A /* FaceInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EA1B41AD3DDE20026E85A /* FaceInfoController.swift */; };
+		CB8EA1B71AD3E8640026E85A /* AdvancedFaceFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EA1B61AD3E8640026E85A /* AdvancedFaceFeature.swift */; };
+		CBDF5DAD1B317A59004D65C8 /* libSuperIDSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDF5DA81B317A59004D65C8 /* libSuperIDSDK.a */; };
+		CBDF5DAE1B317A59004D65C8 /* SuperIDSDKSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CBDF5DAC1B317A59004D65C8 /* SuperIDSDKSettings.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB14D5691A7B58450065EFD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB14D54B1A7B58450065EFD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB14D5521A7B58450065EFD7;
+			remoteInfo = SuperID_SwiftDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB14D5531A7B58450065EFD7 /* SuperID_SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperID_SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB14D5571A7B58450065EFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB14D5581A7B58450065EFD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB14D55A1A7B58450065EFD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB14D55D1A7B58450065EFD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB14D55F1A7B58450065EFD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB14D5681A7B58450065EFD7 /* SuperID_SwiftDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperID_SwiftDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB14D56D1A7B58450065EFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB14D56E1A7B58450065EFD7 /* SuperID_SwiftDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperID_SwiftDemoTests.swift; sourceTree = "<group>"; };
+		CB14D5BC1A7B5AA20065EFD7 /* SuperIDSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SuperIDSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		CB14D5CD1A7B5D7E0065EFD7 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		CB14D5CF1A7B5D870065EFD7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CB14D5D11A7B5D920065EFD7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		CB14D5D31A7B5DAF0065EFD7 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		CB14D6151A7B7DB00065EFD7 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		CB14D61E1A7B7F690065EFD7 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		CB14D61F1A7B7F690065EFD7 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		CB14D6231A7B82530065EFD7 /* CONFIG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CONFIG.swift; sourceTree = "<group>"; };
+		CB1992851A80CFEB00AF2A96 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileCell.swift; path = SuperID_SwiftDemo/CustomCell/ProfileCell.swift; sourceTree = "<group>"; };
+		CB1992871A80D06900AF2A96 /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainCell.swift; path = SuperID_SwiftDemo/CustomCell/MainCell.swift; sourceTree = "<group>"; };
+		CB1992891A80D08F00AF2A96 /* LogoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoutCell.swift; path = SuperID_SwiftDemo/CustomCell/LogoutCell.swift; sourceTree = "<group>"; };
+		CB19928B1A80D21700AF2A96 /* PersonalCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCenter.swift; sourceTree = "<group>"; };
+		CB1E1D521A8072000085C939 /* MacroDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroDefinition.swift; sourceTree = "<group>"; };
+		CB8EA1B41AD3DDE20026E85A /* FaceInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceInfoController.swift; sourceTree = "<group>"; };
+		CB8EA1B61AD3E8640026E85A /* AdvancedFaceFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedFaceFeature.swift; sourceTree = "<group>"; };
+		CBDF5DA81B317A59004D65C8 /* libSuperIDSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSuperIDSDK.a; sourceTree = "<group>"; };
+		CBDF5DA91B317A59004D65C8 /* SIDFaceFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIDFaceFeatureViewController.h; sourceTree = "<group>"; };
+		CBDF5DAA1B317A59004D65C8 /* SuperID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperID.h; sourceTree = "<group>"; };
+		CBDF5DAB1B317A59004D65C8 /* SuperIDDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperIDDelegate.h; sourceTree = "<group>"; };
+		CBDF5DAC1B317A59004D65C8 /* SuperIDSDKSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SuperIDSDKSettings.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB14D5501A7B58450065EFD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBDF5DAD1B317A59004D65C8 /* libSuperIDSDK.a in Frameworks */,
+				CB14D5D41A7B5DAF0065EFD7 /* CoreMedia.framework in Frameworks */,
+				CB14D5D21A7B5D920065EFD7 /* CoreTelephony.framework in Frameworks */,
+				CB14D5D01A7B5D870065EFD7 /* AVFoundation.framework in Frameworks */,
+				CB14D5CE1A7B5D7E0065EFD7 /* libc++.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB14D5651A7B58450065EFD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB14D54A1A7B58450065EFD7 = {
+			isa = PBXGroup;
+			children = (
+				CBDF5DA71B317A59004D65C8 /* SuperID-SDK-iOS */,
+				CB1992841A80CF9800AF2A96 /* CustomCell */,
+				CB14D61C1A7B7F690065EFD7 /* UI_Component */,
+				CB14D6141A7B7CA60065EFD7 /* Frameworks */,
+				CB14D5551A7B58450065EFD7 /* SuperID_SwiftDemo */,
+				CB14D56B1A7B58450065EFD7 /* SuperID_SwiftDemoTests */,
+				CB14D5541A7B58450065EFD7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB14D5541A7B58450065EFD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB14D5531A7B58450065EFD7 /* SuperID_SwiftDemo.app */,
+				CB14D5681A7B58450065EFD7 /* SuperID_SwiftDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB14D5551A7B58450065EFD7 /* SuperID_SwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CB14D5BC1A7B5AA20065EFD7 /* SuperIDSDK-Bridging-Header.h */,
+				CB14D5581A7B58450065EFD7 /* AppDelegate.swift */,
+				CB14D55A1A7B58450065EFD7 /* ViewController.swift */,
+				CB19928B1A80D21700AF2A96 /* PersonalCenter.swift */,
+				CB8EA1B61AD3E8640026E85A /* AdvancedFaceFeature.swift */,
+				CB8EA1B41AD3DDE20026E85A /* FaceInfoController.swift */,
+				CB14D6151A7B7DB00065EFD7 /* LaunchScreen.xib */,
+				CB14D55C1A7B58450065EFD7 /* Main.storyboard */,
+				CB14D55F1A7B58450065EFD7 /* Images.xcassets */,
+				CB14D5561A7B58450065EFD7 /* Supporting Files */,
+			);
+			path = SuperID_SwiftDemo;
+			sourceTree = "<group>";
+		};
+		CB14D5561A7B58450065EFD7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB14D5571A7B58450065EFD7 /* Info.plist */,
+				CB14D6231A7B82530065EFD7 /* CONFIG.swift */,
+				CB1E1D521A8072000085C939 /* MacroDefinition.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB14D56B1A7B58450065EFD7 /* SuperID_SwiftDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB14D56E1A7B58450065EFD7 /* SuperID_SwiftDemoTests.swift */,
+				CB14D56C1A7B58450065EFD7 /* Supporting Files */,
+			);
+			path = SuperID_SwiftDemoTests;
+			sourceTree = "<group>";
+		};
+		CB14D56C1A7B58450065EFD7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB14D56D1A7B58450065EFD7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB14D6141A7B7CA60065EFD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB14D5D31A7B5DAF0065EFD7 /* CoreMedia.framework */,
+				CB14D5D11A7B5D920065EFD7 /* CoreTelephony.framework */,
+				CB14D5CF1A7B5D870065EFD7 /* AVFoundation.framework */,
+				CB14D5CD1A7B5D7E0065EFD7 /* libc++.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB14D61C1A7B7F690065EFD7 /* UI_Component */ = {
+			isa = PBXGroup;
+			children = (
+				CB14D61E1A7B7F690065EFD7 /* MBProgressHUD.h */,
+				CB14D61F1A7B7F690065EFD7 /* MBProgressHUD.m */,
+			);
+			name = UI_Component;
+			path = SuperID_SwiftDemo/UI_Component;
+			sourceTree = "<group>";
+		};
+		CB1992841A80CF9800AF2A96 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				CB1992851A80CFEB00AF2A96 /* ProfileCell.swift */,
+				CB1992871A80D06900AF2A96 /* MainCell.swift */,
+				CB1992891A80D08F00AF2A96 /* LogoutCell.swift */,
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
+		CBDF5DA71B317A59004D65C8 /* SuperID-SDK-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBDF5DA81B317A59004D65C8 /* libSuperIDSDK.a */,
+				CBDF5DA91B317A59004D65C8 /* SIDFaceFeatureViewController.h */,
+				CBDF5DAA1B317A59004D65C8 /* SuperID.h */,
+				CBDF5DAB1B317A59004D65C8 /* SuperIDDelegate.h */,
+				CBDF5DAC1B317A59004D65C8 /* SuperIDSDKSettings.bundle */,
+			);
+			path = "SuperID-SDK-iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB14D5521A7B58450065EFD7 /* SuperID_SwiftDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB14D5721A7B58450065EFD7 /* Build configuration list for PBXNativeTarget "SuperID_SwiftDemo" */;
+			buildPhases = (
+				CB14D54F1A7B58450065EFD7 /* Sources */,
+				CB14D5501A7B58450065EFD7 /* Frameworks */,
+				CB14D5511A7B58450065EFD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuperID_SwiftDemo;
+			productName = SuperID_SwiftDemo;
+			productReference = CB14D5531A7B58450065EFD7 /* SuperID_SwiftDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB14D5671A7B58450065EFD7 /* SuperID_SwiftDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB14D5751A7B58450065EFD7 /* Build configuration list for PBXNativeTarget "SuperID_SwiftDemoTests" */;
+			buildPhases = (
+				CB14D5641A7B58450065EFD7 /* Sources */,
+				CB14D5651A7B58450065EFD7 /* Frameworks */,
+				CB14D5661A7B58450065EFD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB14D56A1A7B58450065EFD7 /* PBXTargetDependency */,
+			);
+			name = SuperID_SwiftDemoTests;
+			productName = SuperID_SwiftDemoTests;
+			productReference = CB14D5681A7B58450065EFD7 /* SuperID_SwiftDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB14D54B1A7B58450065EFD7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = GYX;
+				TargetAttributes = {
+					CB14D5521A7B58450065EFD7 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Z64256K8C9;
+					};
+					CB14D5671A7B58450065EFD7 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = CB14D5521A7B58450065EFD7;
+					};
+				};
+			};
+			buildConfigurationList = CB14D54E1A7B58450065EFD7 /* Build configuration list for PBXProject "SuperID_SwiftDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB14D54A1A7B58450065EFD7;
+			productRefGroup = CB14D5541A7B58450065EFD7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB14D5521A7B58450065EFD7 /* SuperID_SwiftDemo */,
+				CB14D5671A7B58450065EFD7 /* SuperID_SwiftDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB14D5511A7B58450065EFD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBDF5DAE1B317A59004D65C8 /* SuperIDSDKSettings.bundle in Resources */,
+				CB14D6161A7B7DB00065EFD7 /* LaunchScreen.xib in Resources */,
+				CB14D55E1A7B58450065EFD7 /* Main.storyboard in Resources */,
+				CB14D5601A7B58450065EFD7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB14D5661A7B58450065EFD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB14D54F1A7B58450065EFD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB14D55B1A7B58450065EFD7 /* ViewController.swift in Sources */,
+				CB1992881A80D06900AF2A96 /* MainCell.swift in Sources */,
+				CB14D6241A7B82530065EFD7 /* CONFIG.swift in Sources */,
+				CB19928C1A80D21700AF2A96 /* PersonalCenter.swift in Sources */,
+				CB1E1D531A8072000085C939 /* MacroDefinition.swift in Sources */,
+				CB1992861A80CFEB00AF2A96 /* ProfileCell.swift in Sources */,
+				CB8EA1B51AD3DDE20026E85A /* FaceInfoController.swift in Sources */,
+				CB8EA1B71AD3E8640026E85A /* AdvancedFaceFeature.swift in Sources */,
+				CB19928A1A80D08F00AF2A96 /* LogoutCell.swift in Sources */,
+				CB14D6201A7B7F690065EFD7 /* MBProgressHUD.m in Sources */,
+				CB14D5591A7B58450065EFD7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB14D5641A7B58450065EFD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB14D56F1A7B58450065EFD7 /* SuperID_SwiftDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB14D56A1A7B58450065EFD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB14D5521A7B58450065EFD7 /* SuperID_SwiftDemo */;
+			targetProxy = CB14D5691A7B58450065EFD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB14D55C1A7B58450065EFD7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB14D55D1A7B58450065EFD7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB14D5701A7B58450065EFD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB14D5711A7B58450065EFD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB14D5731A7B58450065EFD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = SuperID_SwiftDemo/Info.plist;
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SuperID_SDK",
+					"$(PROJECT_DIR)/SuperID-SDK-iOS",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-Objc",
+					"-force_load",
+					"$(PROJECT_DIR)/SuperID-SDK-iOS/libSuperIDSDK.a",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SuperID_SwiftDemo/SuperIDSDK-Bridging-Header.h";
+				VALID_ARCHS = "arm64 armv7s armv7";
+			};
+			name = Debug;
+		};
+		CB14D5741A7B58450065EFD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = SuperID_SwiftDemo/Info.plist;
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SuperID_SDK",
+					"$(PROJECT_DIR)/SuperID-SDK-iOS",
+				);
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-Objc",
+					"-force_load",
+					"$(PROJECT_DIR)/SuperID-SDK-iOS/libSuperIDSDK.a",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SuperID_SwiftDemo/SuperIDSDK-Bridging-Header.h";
+				VALID_ARCHS = "arm64 armv7s armv7";
+			};
+			name = Release;
+		};
+		CB14D5761A7B58450065EFD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SuperID_SwiftDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperID_SwiftDemo.app/SuperID_SwiftDemo";
+			};
+			name = Debug;
+		};
+		CB14D5771A7B58450065EFD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SuperID_SwiftDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperID_SwiftDemo.app/SuperID_SwiftDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB14D54E1A7B58450065EFD7 /* Build configuration list for PBXProject "SuperID_SwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB14D5701A7B58450065EFD7 /* Debug */,
+				CB14D5711A7B58450065EFD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB14D5721A7B58450065EFD7 /* Build configuration list for PBXNativeTarget "SuperID_SwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB14D5731A7B58450065EFD7 /* Debug */,
+				CB14D5741A7B58450065EFD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB14D5751A7B58450065EFD7 /* Build configuration list for PBXNativeTarget "SuperID_SwiftDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB14D5761A7B58450065EFD7 /* Debug */,
+				CB14D5771A7B58450065EFD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB14D54B1A7B58450065EFD7 /* Project object */;
+}
