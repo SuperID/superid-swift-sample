@@ -28,6 +28,7 @@
 		CB8EA1B71AD3E8640026E85A /* AdvancedFaceFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EA1B61AD3E8640026E85A /* AdvancedFaceFeature.swift */; };
 		CBDF5DAD1B317A59004D65C8 /* libSuperIDSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDF5DA81B317A59004D65C8 /* libSuperIDSDK.a */; };
 		CBDF5DAE1B317A59004D65C8 /* SuperIDSDKSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CBDF5DAC1B317A59004D65C8 /* SuperIDSDKSettings.bundle */; };
+		CBF18DF11B3266DF00B1C304 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF18DF01B3266DF00B1C304 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		CBDF5DAA1B317A59004D65C8 /* SuperID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperID.h; sourceTree = "<group>"; };
 		CBDF5DAB1B317A59004D65C8 /* SuperIDDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperIDDelegate.h; sourceTree = "<group>"; };
 		CBDF5DAC1B317A59004D65C8 /* SuperIDSDKSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SuperIDSDKSettings.bundle; sourceTree = "<group>"; };
+		CBF18DF01B3266DF00B1C304 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		CB14D5551A7B58450065EFD7 /* SuperID_SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CBF18DF01B3266DF00B1C304 /* SwiftyJSON.swift */,
 				CB14D5BC1A7B5AA20065EFD7 /* SuperIDSDK-Bridging-Header.h */,
 				CB14D5581A7B58450065EFD7 /* AppDelegate.swift */,
 				CB14D55A1A7B58450065EFD7 /* ViewController.swift */,
@@ -310,6 +313,7 @@
 				CB14D55B1A7B58450065EFD7 /* ViewController.swift in Sources */,
 				CB1992881A80D06900AF2A96 /* MainCell.swift in Sources */,
 				CB14D6241A7B82530065EFD7 /* CONFIG.swift in Sources */,
+				CBF18DF11B3266DF00B1C304 /* SwiftyJSON.swift in Sources */,
 				CB19928C1A80D21700AF2A96 /* PersonalCenter.swift in Sources */,
 				CB1E1D531A8072000085C939 /* MacroDefinition.swift in Sources */,
 				CB1992861A80CFEB00AF2A96 /* ProfileCell.swift in Sources */,
