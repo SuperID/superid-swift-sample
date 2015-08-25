@@ -4,10 +4,7 @@
 2. 复制文件夹 `SuperID-SDK-iOS` 至 Sample 工程文档目录下。
 3. 开始调试运行
 
-
-## 关于 Swift2 与 Xcode7
-
-如果你使用 Xcode7 和 Swift2.0 ，请查看 `Xcode7` 分支 https://github.com/SuperID/superid-swift-sample/tree/Xcode7
+### 本分支在 Xcode7-beta5 测试通过
 
 ## 使用工程编译问题
 
