@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FaceInfoController : UITableViewController, UITableViewDelegate, UITableViewDataSource{
+class FaceInfoController : UITableViewController{
     var receiveData: [String: AnyObject]!
     var faceFeature: JSON!
     
@@ -30,7 +30,7 @@ class FaceInfoController : UITableViewController, UITableViewDelegate, UITableVi
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("mainCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("mainCell", forIndexPath: indexPath) 
         var detailText : String = ""
         
         switch (indexPath.row) {

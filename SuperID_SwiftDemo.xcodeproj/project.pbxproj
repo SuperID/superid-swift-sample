@@ -24,10 +24,10 @@
 		CB19928A1A80D08F00AF2A96 /* LogoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1992891A80D08F00AF2A96 /* LogoutCell.swift */; };
 		CB19928C1A80D21700AF2A96 /* PersonalCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19928B1A80D21700AF2A96 /* PersonalCenter.swift */; };
 		CB1E1D531A8072000085C939 /* MacroDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1E1D521A8072000085C939 /* MacroDefinition.swift */; };
+		CB65EC3F1B8C0E5600A8FB82 /* libSuperIDSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB65EC3A1B8C0E5600A8FB82 /* libSuperIDSDK.a */; };
+		CB65EC401B8C0E5600A8FB82 /* SuperIDSDKSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CB65EC3E1B8C0E5600A8FB82 /* SuperIDSDKSettings.bundle */; };
 		CB8EA1B51AD3DDE20026E85A /* FaceInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EA1B41AD3DDE20026E85A /* FaceInfoController.swift */; };
 		CB8EA1B71AD3E8640026E85A /* AdvancedFaceFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EA1B61AD3E8640026E85A /* AdvancedFaceFeature.swift */; };
-		CBDF5DAD1B317A59004D65C8 /* libSuperIDSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDF5DA81B317A59004D65C8 /* libSuperIDSDK.a */; };
-		CBDF5DAE1B317A59004D65C8 /* SuperIDSDKSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CBDF5DAC1B317A59004D65C8 /* SuperIDSDKSettings.bundle */; };
 		CBF18DF11B3266DF00B1C304 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF18DF01B3266DF00B1C304 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,13 +65,13 @@
 		CB1992891A80D08F00AF2A96 /* LogoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoutCell.swift; path = SuperID_SwiftDemo/CustomCell/LogoutCell.swift; sourceTree = "<group>"; };
 		CB19928B1A80D21700AF2A96 /* PersonalCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCenter.swift; sourceTree = "<group>"; };
 		CB1E1D521A8072000085C939 /* MacroDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroDefinition.swift; sourceTree = "<group>"; };
+		CB65EC3A1B8C0E5600A8FB82 /* libSuperIDSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSuperIDSDK.a; sourceTree = "<group>"; };
+		CB65EC3B1B8C0E5600A8FB82 /* SIDFaceFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIDFaceFeatureViewController.h; sourceTree = "<group>"; };
+		CB65EC3C1B8C0E5600A8FB82 /* SuperID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperID.h; sourceTree = "<group>"; };
+		CB65EC3D1B8C0E5600A8FB82 /* SuperIDDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperIDDelegate.h; sourceTree = "<group>"; };
+		CB65EC3E1B8C0E5600A8FB82 /* SuperIDSDKSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SuperIDSDKSettings.bundle; sourceTree = "<group>"; };
 		CB8EA1B41AD3DDE20026E85A /* FaceInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceInfoController.swift; sourceTree = "<group>"; };
 		CB8EA1B61AD3E8640026E85A /* AdvancedFaceFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedFaceFeature.swift; sourceTree = "<group>"; };
-		CBDF5DA81B317A59004D65C8 /* libSuperIDSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSuperIDSDK.a; sourceTree = "<group>"; };
-		CBDF5DA91B317A59004D65C8 /* SIDFaceFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIDFaceFeatureViewController.h; sourceTree = "<group>"; };
-		CBDF5DAA1B317A59004D65C8 /* SuperID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperID.h; sourceTree = "<group>"; };
-		CBDF5DAB1B317A59004D65C8 /* SuperIDDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperIDDelegate.h; sourceTree = "<group>"; };
-		CBDF5DAC1B317A59004D65C8 /* SuperIDSDKSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SuperIDSDKSettings.bundle; sourceTree = "<group>"; };
 		CBF18DF01B3266DF00B1C304 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBDF5DAD1B317A59004D65C8 /* libSuperIDSDK.a in Frameworks */,
+				CB65EC3F1B8C0E5600A8FB82 /* libSuperIDSDK.a in Frameworks */,
 				CB14D5D41A7B5DAF0065EFD7 /* CoreMedia.framework in Frameworks */,
 				CB14D5D21A7B5D920065EFD7 /* CoreTelephony.framework in Frameworks */,
 				CB14D5D01A7B5D870065EFD7 /* AVFoundation.framework in Frameworks */,
@@ -101,7 +101,7 @@
 		CB14D54A1A7B58450065EFD7 = {
 			isa = PBXGroup;
 			children = (
-				CBDF5DA71B317A59004D65C8 /* SuperID-SDK-iOS */,
+				CB65EC391B8C0E5600A8FB82 /* SuperID-SDK-iOS */,
 				CB1992841A80CF9800AF2A96 /* CustomCell */,
 				CB14D61C1A7B7F690065EFD7 /* UI_Component */,
 				CB14D6141A7B7CA60065EFD7 /* Frameworks */,
@@ -196,14 +196,14 @@
 			name = CustomCell;
 			sourceTree = "<group>";
 		};
-		CBDF5DA71B317A59004D65C8 /* SuperID-SDK-iOS */ = {
+		CB65EC391B8C0E5600A8FB82 /* SuperID-SDK-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CBDF5DA81B317A59004D65C8 /* libSuperIDSDK.a */,
-				CBDF5DA91B317A59004D65C8 /* SIDFaceFeatureViewController.h */,
-				CBDF5DAA1B317A59004D65C8 /* SuperID.h */,
-				CBDF5DAB1B317A59004D65C8 /* SuperIDDelegate.h */,
-				CBDF5DAC1B317A59004D65C8 /* SuperIDSDKSettings.bundle */,
+				CB65EC3A1B8C0E5600A8FB82 /* libSuperIDSDK.a */,
+				CB65EC3B1B8C0E5600A8FB82 /* SIDFaceFeatureViewController.h */,
+				CB65EC3C1B8C0E5600A8FB82 /* SuperID.h */,
+				CB65EC3D1B8C0E5600A8FB82 /* SuperIDDelegate.h */,
+				CB65EC3E1B8C0E5600A8FB82 /* SuperIDSDKSettings.bundle */,
 			);
 			path = "SuperID-SDK-iOS";
 			sourceTree = "<group>";
@@ -252,6 +252,8 @@
 		CB14D54B1A7B58450065EFD7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = GYX;
 				TargetAttributes = {
@@ -289,7 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBDF5DAE1B317A59004D65C8 /* SuperIDSDKSettings.bundle in Resources */,
+				CB65EC401B8C0E5600A8FB82 /* SuperIDSDKSettings.bundle in Resources */,
 				CB14D6161A7B7DB00065EFD7 /* LaunchScreen.xib in Resources */,
 				CB14D55E1A7B58450065EFD7 /* Main.storyboard in Resources */,
 				CB14D5601A7B58450065EFD7 /* Images.xcassets in Resources */,
@@ -438,12 +440,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SuperID_SwiftDemo/Info.plist;
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SuperID_SDK",
+					"$(PROJECT_DIR)/SuperID_SwiftDemo/SuperID-SDK-iOS",
 					"$(PROJECT_DIR)/SuperID-SDK-iOS",
 				);
 				ONLY_ACTIVE_ARCH = NO;
@@ -466,12 +469,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SuperID_SwiftDemo/Info.plist;
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SuperID_SDK",
+					"$(PROJECT_DIR)/SuperID_SwiftDemo/SuperID-SDK-iOS",
 					"$(PROJECT_DIR)/SuperID-SDK-iOS",
 				);
 				OTHER_LDFLAGS = (

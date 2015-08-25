@@ -27,16 +27,17 @@ class ViewController: UIViewController ,SuperIDDelegate {
     }
 
     @IBAction func SuperIDBtn(sender: AnyObject) {
-        var loginError: NSError?
-        let SuperID_LoginView: AnyObject! = SuperID.sharedInstance().obtainLoginViewControllerWithError(&loginError)
-        if (loginError != nil) {
-            if let error = loginError {
-                println("loginView Error = \(error.code) : \(error.localizedDescription)")
+        
+        let SuperID_LoginView: AnyObject!
+        do {
+            SuperID_LoginView = try SuperID.sharedInstance().obtainLoginViewController()
+            if (SuperID_LoginView != nil){
+                self.presentViewController(SuperID_LoginView as! UIViewController, animated: true, completion: nil)
             }
+        } catch let error as NSError {
+            print("loginView Error = \(error.code) : \(error.localizedDescription)")
         }
-        if (SuperID_LoginView != nil){
-            self.presentViewController(SuperID_LoginView as! UIViewController, animated: true, completion: nil)
-        }
+
     }
     @IBAction func loginBtn(sender: AnyObject) {
         self.performSegueWithIdentifier("ShowPerson", sender: nil)
@@ -44,12 +45,12 @@ class ViewController: UIViewController ,SuperIDDelegate {
     
     
     func superID(sender: SuperID!, userDidFinishLoginWithUserInfo userInfo: [NSObject : AnyObject]!, withAppUid uid: String!, error: NSError!) {
-        print("Login Done : \(userInfo) and \(uid)")
+        print("Login Done : \(userInfo) and \(uid)", appendNewline: false)
         self.performSegueWithIdentifier("ShowPerson", sender: userInfo)
     }
     
     func superID(sender: SuperID!, userLoginFail error: NSError!) {
-        println("loginView Error = \(error.code) : \(error.localizedDescription)")
+        print("loginView Error = \(error.code) : \(error.localizedDescription)")
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
@@ -76,7 +77,7 @@ class ViewController: UIViewController ,SuperIDDelegate {
         navigationController?.navigationBar.backgroundColor = UIColor.whiteColor()
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSFontAttributeName: UIFont.boldSystemFontOfSize(16)]
-        navigationController?.navigationBar.titleTextAttributes = titleDict as [NSObject : AnyObject]
+        navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject]
         
         confirmBtn.backgroundColor = Superid_Demo_Theme
         confirmBtn.clipsToBounds = true

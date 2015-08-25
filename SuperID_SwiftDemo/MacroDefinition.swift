@@ -19,12 +19,12 @@ func HEXRGB(rgbValue: UInt) -> UIColor {
 
 //读取沙盒图片
 func SANDBOXIMAGE(filename: String) -> UIImage {
-    return UIImage(contentsOfFile: NSHomeDirectory().stringByAppendingPathComponent("Documents").stringByAppendingPathComponent(filename))!
+    return UIImage(contentsOfFile: ((NSHomeDirectory() as NSString).stringByAppendingPathComponent("Documents") as NSString).stringByAppendingPathComponent(filename))!
 }
 
 //读取沙盒图片地址
 func SANDBOXIMAGEPATH(filename: String) -> String {
-    return NSHomeDirectory().stringByAppendingPathComponent("Documents").stringByAppendingPathComponent(filename)
+    return ((NSHomeDirectory() as NSString).stringByAppendingPathComponent("Documents") as NSString).stringByAppendingPathComponent(filename)
 }
 
 func VIEW_W(view: UIView) -> CGFloat{
