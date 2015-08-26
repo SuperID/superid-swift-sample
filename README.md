@@ -9,6 +9,8 @@
 
 如果你使用 Xcode7 和 Swift2.0 ，请查看 `Xcode7` 分支 https://github.com/SuperID/superid-swift-sample/tree/Xcode7
 
+**已经更新至 Xcode7-beta6**
+
 ## 使用工程编译问题
 
 在工程的```Bridging_Header```头文件中添加
