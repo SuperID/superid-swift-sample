@@ -207,7 +207,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
 
     
     func superID(sender: SuperID!, userDidFinishAuthAppWithUserInfo userInfo: [NSObject : AnyObject]!, withAppUid uid: String!) {
-        print("Succeed !", appendNewline: false)
+        print("Succeed !")
         receiveData = nil
         receiveData = userInfo as! Dictionary<String, AnyObject>
         tableView.reloadData()
@@ -218,7 +218,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
     
     
     func superID(sender: SuperID!, userAuthAppFail error: NSError!) {
-        print("Fail !", appendNewline: false)
+        print("Fail !")
         hud.mode = MBProgressHUDModeText
         hud.labelText = "绑定失败"
         hud.hide(true, afterDelay: 0.5)
@@ -229,7 +229,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
             hud.mode = MBProgressHUDModeText
             hud.labelText = "解绑失败"
             hud.hide(true, afterDelay: 0.5)
-            print("CancelAuthorization Fail \(error.code) : \(error.localizedDescription)", appendNewline: false)
+            print("CancelAuthorization Fail \(error.code) : \(error.localizedDescription)")
         }else{
             user.removeObjectForKey("UserInfo")
             user.removeObjectForKey("UserAvatar")
@@ -238,7 +238,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
             hud.mode = MBProgressHUDModeText
             hud.labelText = "解绑成功"
             hud.hide(true, afterDelay: 0.5)
-            print("Succeed!", appendNewline: false)
+            print("Succeed!")
         }
     }
     
@@ -247,7 +247,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
             hud.mode = MBProgressHUDModeText
             hud.labelText = "网络错误"
             hud.hide(true, afterDelay: 0.5)
-            print("NetWorkError", appendNewline: false)
+            print("NetWorkError")
         }
     }
     

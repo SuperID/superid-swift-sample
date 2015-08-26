@@ -45,7 +45,7 @@ class ViewController: UIViewController ,SuperIDDelegate {
     
     
     func superID(sender: SuperID!, userDidFinishLoginWithUserInfo userInfo: [NSObject : AnyObject]!, withAppUid uid: String!, error: NSError!) {
-        print("Login Done : \(userInfo) and \(uid)", appendNewline: false)
+        print("Login Done : \(userInfo) and \(uid)")
         self.performSegueWithIdentifier("ShowPerson", sender: userInfo)
     }
     

@@ -35,7 +35,7 @@ class AdvancedFaceFeature : SIDFaceFeatureViewController {
     }
     
     override func getFaceFeatureSucceedWithFeatureInfo(featureInfo: [NSObject : AnyObject]!) {
-        print("获取人脸表情成功\(featureInfo)", appendNewline: false)
+        print("获取人脸表情成功\(featureInfo)")
         
         self.startFaceFeature.hidden = false
         hud.mode = MBProgressHUDModeText
@@ -46,7 +46,7 @@ class AdvancedFaceFeature : SIDFaceFeatureViewController {
     
     override func getFaceFeatureFail(error: NSError!) {
         
-        print("获取人脸表情失败", appendNewline: false)
+        print("获取人脸表情失败")
         
         self.startFaceFeature.hidden = false;
         hud.mode = MBProgressHUDModeText;

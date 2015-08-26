@@ -4,7 +4,7 @@
 2. 复制文件夹 `SuperID-SDK-iOS` 至 Sample 工程文档目录下。
 3. 开始调试运行
 
-### 本分支在 Xcode7-beta5 测试通过
+### 本分支在 Xcode7-beta6 测试通过
 
 ## 使用工程编译问题
 

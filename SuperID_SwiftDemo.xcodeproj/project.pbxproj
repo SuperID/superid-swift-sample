@@ -254,7 +254,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = GYX;
 				TargetAttributes = {
 					CB14D5521A7B58450065EFD7 = {
@@ -377,6 +377,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -446,7 +447,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SuperID_SwiftDemo/SuperID-SDK-iOS",
 					"$(PROJECT_DIR)/SuperID-SDK-iOS",
 				);
 				ONLY_ACTIVE_ARCH = NO;
@@ -456,6 +456,7 @@
 					"-force_load",
 					"$(PROJECT_DIR)/SuperID-SDK-iOS/libSuperIDSDK.a",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yourtion.SuperID-SwiftDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SuperID_SwiftDemo/SuperIDSDK-Bridging-Header.h";
@@ -475,7 +476,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/SuperID_SwiftDemo/SuperID-SDK-iOS",
 					"$(PROJECT_DIR)/SuperID-SDK-iOS",
 				);
 				OTHER_LDFLAGS = (
@@ -484,6 +484,7 @@
 					"-force_load",
 					"$(PROJECT_DIR)/SuperID-SDK-iOS/libSuperIDSDK.a",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yourtion.SuperID-SwiftDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SuperID_SwiftDemo/SuperIDSDK-Bridging-Header.h";
@@ -505,6 +506,7 @@
 				);
 				INFOPLIST_FILE = SuperID_SwiftDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yourtion.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperID_SwiftDemo.app/SuperID_SwiftDemo";
 			};
@@ -520,6 +522,7 @@
 				);
 				INFOPLIST_FILE = SuperID_SwiftDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yourtion.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperID_SwiftDemo.app/SuperID_SwiftDemo";
 			};
