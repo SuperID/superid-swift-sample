@@ -4,7 +4,7 @@
 2. 复制文件夹 `SuperID-SDK-iOS` 至 Sample 工程文档目录下。
 3. 开始调试运行
 
-**已经更新至 Xcode7 正式版本，使用Xcode6用户请切换到 `Xcode6` 分支**
+**已经更新至 Xcode7 正式版本，使用Xcode6用户请切换到 `Xcode6` 分支**
 
 ## 使用工程编译问题
 
