@@ -59,7 +59,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        var customView : UIView = UIView.init(frame: CGRectMake(0, 0, self.view.frame.width,44))
+        let customView : UIView = UIView.init(frame: CGRectMake(0, 0, self.view.frame.width,44))
         customView.backgroundColor = Superid_Demo_Artboard
         return customView
 
@@ -92,7 +92,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
                     cell.profileImg.image = SANDBOXIMAGE("avatar.jpg")
                 }else{
                     let url = NSURL(string:receiveData["avatar"] as! String)
-                    var imageRequest: NSURLRequest = NSURLRequest(URL: url!)
+                    let imageRequest: NSURLRequest = NSURLRequest(URL: url!)
                     NSURLConnection.sendAsynchronousRequest(imageRequest,
                         queue: NSOperationQueue.mainQueue(),
                         completionHandler:{response, data, error in
@@ -162,17 +162,18 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
                             return "\(NSDate().timeIntervalSince1970 * 1000)"
                         }
                     }
-                    var phone : String! = nil
-                    var authError: NSError?
-                    let SuperID_AuthView: AnyObject! = SuperID.sharedInstance().obtainAuthViewControllerWithUid(dateNow, phoneNumber: phone, appUserInfo: appUserInfo, error: &authError)
-                    if (authError != nil) {
-                        if let error = authError {
-                            println("loginView Error = \(error.code) : \(error.localizedDescription)")
+                    let phone : String! = nil
+                    
+                    let SuperID_AuthView: AnyObject!
+                    do {
+                        SuperID_AuthView = try SuperID.sharedInstance().obtainAuthViewControllerWithUid(dateNow, phoneNumber: phone, appUserInfo: appUserInfo)
+                        if (SuperID_AuthView != nil){
+                            self.presentViewController(SuperID_AuthView as! UIViewController, animated: true, completion: nil)
                         }
+                    } catch let error as NSError {
+                        print("AuthView Error = \(error.code) : \(error.localizedDescription)")
                     }
-                    if (SuperID_AuthView != nil){
-                        self.presentViewController(SuperID_AuthView as! UIViewController, animated: true, completion: nil)
-                    }
+
                 }
             }
             
@@ -181,20 +182,17 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
             cell.selected = false
             
             if(indexPath.row == 0){
-                var loginError: NSError?
-                let SuperID_FaceFeature: AnyObject! = SuperID.sharedInstance().obtainFaceFeatureViewControllerWithError(&loginError)
-                if (loginError != nil) {
-                    if let error = loginError {
-                        hud.mode = MBProgressHUDModeText
-                        hud.labelText = "请先绑定一登"
-                        hud.show(true)
-                        hud.hide(true, afterDelay: 0.8)
-                        println("loginView Error = \(error.code) : \(error.localizedDescription)")
+                
+                let SuperID_FaceFeature: AnyObject!
+                do {
+                    SuperID_FaceFeature = try SuperID.sharedInstance().obtainFaceFeatureViewController()
+                    if (SuperID_FaceFeature != nil){
+                        self.presentViewController(SuperID_FaceFeature as! UIViewController, animated: true, completion: nil)
                     }
+                } catch let error as NSError {
+                    print("FaceFeature Error = \(error.code) : \(error.localizedDescription)")
                 }
-                if (SuperID_FaceFeature != nil){
-                    self.presentViewController(SuperID_FaceFeature as! UIViewController, animated: true, completion: nil)
-                }
+
             }
             
             if(indexPath.row == 1){
@@ -255,7 +253,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
     
     func superID(sender: SuperID!, userDidFinishGetFaceFeatureWithFeatureInfo featureInfo: [NSObject : AnyObject]!, error: NSError!) {
         if((error) != nil){
-            println("GetFaceFeature Error = \(error.code) : \(error.localizedDescription)")
+            print("GetFaceFeature Error = \(error.code) : \(error.localizedDescription)")
         }else{
             self.performSegueWithIdentifier("ShowFaceInfo", sender: featureInfo)
         }
