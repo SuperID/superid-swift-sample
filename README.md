@@ -5,11 +5,7 @@
 3. 开始调试运行
 
 
-## 关于 Swift2 与 Xcode7
-
-如果你使用 Xcode7 和 Swift2.0 ，请查看 `Xcode7` 分支 https://github.com/SuperID/superid-swift-sample/tree/Xcode7
-
-**已经更新至 Xcode7-beta6**
+## 本分支在 `Xcode 6.4` 编译通过
 
 ## 使用工程编译问题
 
