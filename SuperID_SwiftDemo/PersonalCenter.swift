@@ -6,6 +6,28 @@
 //  Copyright (c) 2015 GYX. All rights reserved.
 //
 
+//   ************************************************************
+
+//   当用户修改了app的个人资料以后，请调用此接口进行资料上传更新。
+//    NSMutableDictionary *userInfo = [[NSMutableDictionary alloc]init];
+
+//    更新用户的APP个人信息
+//    [userInfo setObject:@"xxxxx" forKey:@"name"];
+//    [userInfo setObject:@"xxxx@gmail.com" forKey:@"email"];
+//    [userInfo setObject:@"xxxxxxxxx" forKey:@"avatar"];
+//
+//    [SDK updateAppUserInfoToSuperIDAccount:userInfo];/**
+
+//   ************************************************************
+
+//   ************************************************************
+//
+//   当用户完成授权操作或者进入用户个人授权页面时，开发者需查询用户OpenID授权状态用
+//   于更新UI界面和切换绑定、解绑操作。方法如下
+//  - (void)queryCurrentUserAuthorizationStateWithOpenId:(NSString *)openId;
+//
+//   ************************************************************
+
 import Foundation
 
 class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UITableViewDataSource {
@@ -156,6 +178,8 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
                     SuperID.sharedInstance().userCancelAuthorization()
 
                 }else{
+                    
+                    //生成用户个人账户信息的字典：其中key：name，email，avatar这三项需跟demo所示一致：
                     let appUserInfo : Dictionary<String,String>! = ["name":"Yourtion","email":"yourtion@gmail.com","avatar":""]
                     var dateNow : String {
                     get {
@@ -166,6 +190,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
                     
                     let SuperID_AuthView: AnyObject!
                     do {
+                        //调用授权绑定的VC需传入用户的账号Uid，由于Demo无独立的三方账号体系，采用随机的时间戳 dateNow 作为Uid做Demo示例用。
                         SuperID_AuthView = try SuperID.sharedInstance().obtainAuthViewControllerWithUid(dateNow, phoneNumber: phone, appUserInfo: appUserInfo)
                         if (SuperID_AuthView != nil){
                             self.presentViewController(SuperID_AuthView as! UIViewController, animated: true, completion: nil)
