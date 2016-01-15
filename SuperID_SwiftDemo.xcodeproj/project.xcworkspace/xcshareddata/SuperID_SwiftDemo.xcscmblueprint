@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "742A52A40AB5F100B60D532F22808BA85CCBF7EE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "742A52A40AB5F100B60D532F22808BA85CCBF7EE" : 0,
+    "CDF380E15B640EE2F75B2891E476323A24FB37F8" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DC6583E1-A133-4D19-BC46-86F7EA8676A6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "742A52A40AB5F100B60D532F22808BA85CCBF7EE" : "superid-swift-sample\/",
+    "CDF380E15B640EE2F75B2891E476323A24FB37F8" : "..\/..\/TempFile\/superid-ios-sdk"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SuperID_SwiftDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SuperID_SwiftDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:SuperID\/superid-swift-sample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "742A52A40AB5F100B60D532F22808BA85CCBF7EE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:SuperID\/superid-ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CDF380E15B640EE2F75B2891E476323A24FB37F8"
+    }
+  ]
+}
