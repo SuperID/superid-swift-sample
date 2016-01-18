@@ -12,7 +12,6 @@
 		CB14D55E1A7B58450065EFD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB14D55C1A7B58450065EFD7 /* Main.storyboard */; };
 		CB14D5601A7B58450065EFD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB14D55F1A7B58450065EFD7 /* Images.xcassets */; };
 		CB14D56F1A7B58450065EFD7 /* SuperID_SwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14D56E1A7B58450065EFD7 /* SuperID_SwiftDemoTests.swift */; };
-		CB14D5CE1A7B5D7E0065EFD7 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB14D5CD1A7B5D7E0065EFD7 /* libc++.dylib */; };
 		CB14D5D01A7B5D870065EFD7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB14D5CF1A7B5D870065EFD7 /* AVFoundation.framework */; };
 		CB14D5D21A7B5D920065EFD7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB14D5D11A7B5D920065EFD7 /* CoreTelephony.framework */; };
 		CB14D5D41A7B5DAF0065EFD7 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB14D5D31A7B5DAF0065EFD7 /* CoreMedia.framework */; };
@@ -84,7 +83,6 @@
 				CB14D5D41A7B5DAF0065EFD7 /* CoreMedia.framework in Frameworks */,
 				CB14D5D21A7B5D920065EFD7 /* CoreTelephony.framework in Frameworks */,
 				CB14D5D01A7B5D870065EFD7 /* AVFoundation.framework in Frameworks */,
-				CB14D5CE1A7B5D7E0065EFD7 /* libc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

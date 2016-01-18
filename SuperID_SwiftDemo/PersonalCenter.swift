@@ -190,7 +190,6 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
                     
                     let SuperID_AuthView: AnyObject!
                     do {
-                        //调用授权绑定的VC需传入用户的账号Uid，由于Demo无独立的三方账号体系，采用随机的时间戳 dateNow 作为Uid做Demo示例用。
                         SuperID_AuthView = try SuperID.sharedInstance().obtainLoginViewControllerWithPhoneNumber(phone, appUserInfo: appUserInfo)
                         if (SuperID_AuthView != nil){
                             self.presentViewController(SuperID_AuthView as! UIViewController, animated: true, completion: nil)

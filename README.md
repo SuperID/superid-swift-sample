@@ -20,7 +20,6 @@
 
 确保已经引入下列框架，否则可能会出错：
 
-- `libc++.dylib`
 - `AVFoundation.framework`
 - `CoreMedia.framework`
 - `CoreTelephony.framework`
