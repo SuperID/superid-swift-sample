@@ -22,9 +22,9 @@ let Superid_Demo_Btn_Pressed = HEXRGB(0xBA3030)
 let Superid_Demo_Border = HEXRGB(0xCCCCCC)
 
 // font definition:
-let Superid_Size_Font_Bar      = UIFont.systemFontOfSize(17)
-let Superid_Size_Font_Title    = UIFont.systemFontOfSize(16)
-let Superid_Size_Font_Text     = UIFont.systemFontOfSize(13)
-let Superid_Size_Font_Tips     = UIFont.systemFontOfSize(12)
-let SuperID_Size_Font_Contant  = UIFont.systemFontOfSize(15)
+let Superid_Size_Font_Bar      = UIFont.systemFont(ofSize: 17)
+let Superid_Size_Font_Title    = UIFont.systemFont(ofSize: 16)
+let Superid_Size_Font_Text     = UIFont.systemFont(ofSize: 13)
+let Superid_Size_Font_Tips     = UIFont.systemFont(ofSize: 12)
+let SuperID_Size_Font_Contant  = UIFont.systemFont(ofSize: 15)
 

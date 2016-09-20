@@ -17,7 +17,7 @@ class MainCell: UITableViewCell {
     override func awakeFromNib() {
         nameLable.font = Superid_Size_Font_Title
         nameLable.textColor = Superid_Demo_Font_Title
-        iconImg.contentMode = UIViewContentMode.ScaleAspectFit
+        iconImg.contentMode = UIViewContentMode.scaleAspectFit
         bundleLable.textColor = Superid_Demo_Theme
         bundleLable.font = Superid_Size_Font_Text
     }

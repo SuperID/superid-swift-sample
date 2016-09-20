@@ -21,40 +21,40 @@ class ViewController: UIViewController ,SuperIDDelegate {
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         SuperID.sharedInstance().delegate = self;
     }
 
-    @IBAction func SuperIDBtn(sender: AnyObject) {
+    @IBAction func SuperIDBtn(_ sender: AnyObject) {
         
         let SuperID_LoginView: AnyObject!
         do {
             SuperID_LoginView = try SuperID.sharedInstance().obtainLoginViewController()
             if (SuperID_LoginView != nil){
-                self.presentViewController(SuperID_LoginView as! UIViewController, animated: true, completion: nil)
+                self.present(SuperID_LoginView as! UIViewController, animated: true, completion: nil)
             }
         } catch let error as NSError {
             print("loginView Error = \(error.code) : \(error.localizedDescription)")
         }
 
     }
-    @IBAction func loginBtn(sender: AnyObject) {
-        self.performSegueWithIdentifier("ShowPerson", sender: nil)
+    @IBAction func loginBtn(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "ShowPerson", sender: nil)
     }
     
-    func superID(sender: SuperID!, userDidFinishLoginWithUserInfo userInfo: [NSObject : AnyObject]!, withOpenId openId: String!, error: NSError!) {
+    func superID(_ sender: SuperID!, userDidFinishLoginWithUserInfo userInfo: [AnyHashable: Any]!, withOpenId openId: String!, error: Error!) {
         print("Login Done : \(userInfo) and \(openId)")
-        self.performSegueWithIdentifier("ShowPerson", sender: userInfo)
+        self.performSegue(withIdentifier: "ShowPerson", sender: userInfo)
     }
     
-    func superID(sender: SuperID!, userLoginFail error: NSError!) {
+    func superID(_ sender: SuperID!, userLoginFail error: NSError!) {
         print("loginView Error = \(error.code) : \(error.localizedDescription)")
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "ShowPerson") {
-            let personView : PersonalCenter = segue.destinationViewController as! PersonalCenter
+            let personView : PersonalCenter = segue.destination as! PersonalCenter
             personView.navigationItem.hidesBackButton = true;
             if((sender) != nil){
                 personView.receiveData = sender as! Dictionary<String, AnyObject>
@@ -65,22 +65,22 @@ class ViewController: UIViewController ,SuperIDDelegate {
     
     func setupView(){
 
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated:true)
+        UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated:true)
         
         self.view.backgroundColor = Superid_Demo_Artboard
         navigationItem.title="一登Demo"
-        navigationController?.navigationBar.tintColor=UIColor.whiteColor()
+        navigationController?.navigationBar.tintColor=UIColor.white
         navigationController?.navigationBar.barTintColor = Superid_Demo_Theme
-        navigationController?.navigationBar.translucent = false
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        navigationController?.navigationBar.backgroundColor = UIColor.whiteColor()
-        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSFontAttributeName: UIFont.boldSystemFontOfSize(16)]
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.backgroundColor = UIColor.white
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white,
+            NSFontAttributeName: UIFont.boldSystemFont(ofSize: 16)]
         navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject]
         
         confirmBtn.backgroundColor = Superid_Demo_Theme
         confirmBtn.clipsToBounds = true
-        confirmBtn.layer.borderColor = UIColor.clearColor().CGColor
+        confirmBtn.layer.borderColor = UIColor.clear.cgColor
         confirmBtn.layer.borderWidth = 0.5
         confirmBtn.layer.cornerRadius = 4
         confirmBtn.titleLabel?.font = Superid_Size_Font_Title
@@ -91,18 +91,18 @@ class ViewController: UIViewController ,SuperIDDelegate {
         
     }
     
-    func initTextFild(textField: UITextField) ->UITextField{
+    func initTextFild(_ textField: UITextField) ->UITextField{
         
-        textField.backgroundColor = UIColor.whiteColor()
-        textField.keyboardAppearance = UIKeyboardAppearance.Light
+        textField.backgroundColor = UIColor.white
+        textField.keyboardAppearance = UIKeyboardAppearance.light
         textField.textColor = Superid_Demo_Font_Title
         textField.font = Superid_Size_Font_Title
-        textField.textAlignment = NSTextAlignment.Center
-        textField.clearButtonMode=UITextFieldViewMode.WhileEditing
+        textField.textAlignment = NSTextAlignment.center
+        textField.clearButtonMode=UITextFieldViewMode.whileEditing
         textField.layer.cornerRadius = 4.0
         textField.clipsToBounds = true
         textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = Superid_Demo_Border.CGColor
+        textField.layer.borderColor = Superid_Demo_Border.cgColor
     
         return textField;
     }

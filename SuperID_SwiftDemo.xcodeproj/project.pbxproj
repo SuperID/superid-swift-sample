@@ -11,7 +11,6 @@
 		CB14D55B1A7B58450065EFD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14D55A1A7B58450065EFD7 /* ViewController.swift */; };
 		CB14D55E1A7B58450065EFD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB14D55C1A7B58450065EFD7 /* Main.storyboard */; };
 		CB14D5601A7B58450065EFD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB14D55F1A7B58450065EFD7 /* Images.xcassets */; };
-		CB14D56F1A7B58450065EFD7 /* SuperID_SwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB14D56E1A7B58450065EFD7 /* SuperID_SwiftDemoTests.swift */; };
 		CB14D5D01A7B5D870065EFD7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB14D5CF1A7B5D870065EFD7 /* AVFoundation.framework */; };
 		CB14D5D21A7B5D920065EFD7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB14D5D11A7B5D920065EFD7 /* CoreTelephony.framework */; };
 		CB14D5D41A7B5DAF0065EFD7 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB14D5D31A7B5DAF0065EFD7 /* CoreMedia.framework */; };
@@ -30,16 +29,6 @@
 		CBF18DF11B3266DF00B1C304 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF18DF01B3266DF00B1C304 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CB14D5691A7B58450065EFD7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB14D54B1A7B58450065EFD7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB14D5521A7B58450065EFD7;
-			remoteInfo = SuperID_SwiftDemo;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		CB14D5531A7B58450065EFD7 /* SuperID_SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperID_SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB14D5571A7B58450065EFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,9 +36,6 @@
 		CB14D55A1A7B58450065EFD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB14D55D1A7B58450065EFD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB14D55F1A7B58450065EFD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CB14D5681A7B58450065EFD7 /* SuperID_SwiftDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperID_SwiftDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB14D56D1A7B58450065EFD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB14D56E1A7B58450065EFD7 /* SuperID_SwiftDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperID_SwiftDemoTests.swift; sourceTree = "<group>"; };
 		CB14D5BC1A7B5AA20065EFD7 /* SuperIDSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SuperIDSDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		CB14D5CD1A7B5D7E0065EFD7 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		CB14D5CF1A7B5D870065EFD7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -86,13 +72,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB14D5651A7B58450065EFD7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -104,7 +83,6 @@
 				CB14D61C1A7B7F690065EFD7 /* UI_Component */,
 				CB14D6141A7B7CA60065EFD7 /* Frameworks */,
 				CB14D5551A7B58450065EFD7 /* SuperID_SwiftDemo */,
-				CB14D56B1A7B58450065EFD7 /* SuperID_SwiftDemoTests */,
 				CB14D5541A7B58450065EFD7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				CB14D5531A7B58450065EFD7 /* SuperID_SwiftDemo.app */,
-				CB14D5681A7B58450065EFD7 /* SuperID_SwiftDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,23 +119,6 @@
 				CB14D5571A7B58450065EFD7 /* Info.plist */,
 				CB14D6231A7B82530065EFD7 /* CONFIG.swift */,
 				CB1E1D521A8072000085C939 /* MacroDefinition.swift */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CB14D56B1A7B58450065EFD7 /* SuperID_SwiftDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				CB14D56E1A7B58450065EFD7 /* SuperID_SwiftDemoTests.swift */,
-				CB14D56C1A7B58450065EFD7 /* Supporting Files */,
-			);
-			path = SuperID_SwiftDemoTests;
-			sourceTree = "<group>";
-		};
-		CB14D56C1A7B58450065EFD7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CB14D56D1A7B58450065EFD7 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -226,24 +186,6 @@
 			productReference = CB14D5531A7B58450065EFD7 /* SuperID_SwiftDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CB14D5671A7B58450065EFD7 /* SuperID_SwiftDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB14D5751A7B58450065EFD7 /* Build configuration list for PBXNativeTarget "SuperID_SwiftDemoTests" */;
-			buildPhases = (
-				CB14D5641A7B58450065EFD7 /* Sources */,
-				CB14D5651A7B58450065EFD7 /* Frameworks */,
-				CB14D5661A7B58450065EFD7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB14D56A1A7B58450065EFD7 /* PBXTargetDependency */,
-			);
-			name = SuperID_SwiftDemoTests;
-			productName = SuperID_SwiftDemoTests;
-			productReference = CB14D5681A7B58450065EFD7 /* SuperID_SwiftDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -252,16 +194,13 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = GYX;
 				TargetAttributes = {
 					CB14D5521A7B58450065EFD7 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = CV2JKHPWU5;
-					};
-					CB14D5671A7B58450065EFD7 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = CB14D5521A7B58450065EFD7;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -279,7 +218,6 @@
 			projectRoot = "";
 			targets = (
 				CB14D5521A7B58450065EFD7 /* SuperID_SwiftDemo */,
-				CB14D5671A7B58450065EFD7 /* SuperID_SwiftDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -293,13 +231,6 @@
 				CB14D6161A7B7DB00065EFD7 /* LaunchScreen.xib in Resources */,
 				CB14D55E1A7B58450065EFD7 /* Main.storyboard in Resources */,
 				CB14D5601A7B58450065EFD7 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB14D5661A7B58450065EFD7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,23 +256,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB14D5641A7B58450065EFD7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB14D56F1A7B58450065EFD7 /* SuperID_SwiftDemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CB14D56A1A7B58450065EFD7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB14D5521A7B58450065EFD7 /* SuperID_SwiftDemo */;
-			targetProxy = CB14D5691A7B58450065EFD7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CB14D55C1A7B58450065EFD7 /* Main.storyboard */ = {
@@ -368,8 +283,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -378,6 +295,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -411,8 +329,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -420,6 +340,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -429,6 +350,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -458,6 +380,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SuperID_SwiftDemo/SuperIDSDK-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7s armv7";
 			};
 			name = Debug;
@@ -486,43 +409,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/SuperID_SwiftDemo/SuperIDSDK-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7s armv7";
-			};
-			name = Release;
-		};
-		CB14D5761A7B58450065EFD7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SuperID_SwiftDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "yourtion.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperID_SwiftDemo.app/SuperID_SwiftDemo";
-			};
-			name = Debug;
-		};
-		CB14D5771A7B58450065EFD7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SuperID_SwiftDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "yourtion.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperID_SwiftDemo.app/SuperID_SwiftDemo";
 			};
 			name = Release;
 		};
@@ -543,15 +431,6 @@
 			buildConfigurations = (
 				CB14D5731A7B58450065EFD7 /* Debug */,
 				CB14D5741A7B58450065EFD7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB14D5751A7B58450065EFD7 /* Build configuration list for PBXNativeTarget "SuperID_SwiftDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB14D5761A7B58450065EFD7 /* Debug */,
-				CB14D5771A7B58450065EFD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

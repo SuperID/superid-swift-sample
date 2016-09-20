@@ -32,7 +32,7 @@ import Foundation
 
 class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UITableViewDataSource {
     var receiveData: Dictionary<String, AnyObject>!
-    var user : NSUserDefaults!
+    var user : UserDefaults!
     var hud : MBProgressHUD!
     @IBOutlet weak var tableView: UITableView!
     
@@ -47,28 +47,28 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
         tableView.delegate = self
         tableView.dataSource = self
         SuperID.sharedInstance().delegate = self
-        user = NSUserDefaults.standardUserDefaults()
-        let userInfos : Dictionary? = user.objectForKey("UserInfo") as? Dictionary<String,AnyObject>
+        user = UserDefaults.standard
+        let userInfos : Dictionary? = user.object(forKey: "UserInfo") as? Dictionary<String,AnyObject>
         if ((userInfos) != nil){
             receiveData = userInfos
         }else if((receiveData) != nil){
-            let user : NSUserDefaults = NSUserDefaults.standardUserDefaults()
-            user.setObject(receiveData, forKey: "UserInfo")
+            let user : UserDefaults = UserDefaults.standard
+            user.set(receiveData, forKey: "UserInfo")
         }
         
         if(hud == nil){
-            hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            hud = MBProgressHUD.showAdded(to: self.view, animated: true)
             hud.removeFromSuperViewOnHide = false
             hud.hide(false)
         }
         
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 4;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (section == 0) {
             return 1
         }else if (section == 1){
@@ -80,14 +80,14 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
         }
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let customView : UIView = UIView.init(frame: CGRectMake(0, 0, self.view.frame.width,44))
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let customView : UIView = UIView.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.width,height: 44))
         customView.backgroundColor = Superid_Demo_Artboard
         return customView
 
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if (section == 0) {
             return 0
         }else{
@@ -95,33 +95,33 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
         }
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if (indexPath.section == 0) {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if ((indexPath as NSIndexPath).section == 0) {
             return 140
         }else{
             return 44
         }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if (indexPath.section == 0) {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if ((indexPath as NSIndexPath).section == 0) {
             
-            let cell : ProfileCell = tableView.dequeueReusableCellWithIdentifier("profileCell", forIndexPath: indexPath) as! ProfileCell
+            let cell : ProfileCell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath) as! ProfileCell
             if ((receiveData) != nil){
                 cell.userName.text = receiveData["name"] as? String
                 cell.mobileNumber.text = receiveData["phone"] as? String
-                if((user.objectForKey("UserAvatar")) != nil){
+                if((user.object(forKey: "UserAvatar")) != nil){
                     cell.profileImg.image = SANDBOXIMAGE("avatar.jpg")
                 }else{
-                    let url = NSURL(string:receiveData["avatar"] as! String)
-                    let imageRequest: NSURLRequest = NSURLRequest(URL: url!)
+                    let url = URL(string:receiveData["avatar"] as! String)
+                    let imageRequest: URLRequest = URLRequest(url: url!)
                     NSURLConnection.sendAsynchronousRequest(imageRequest,
-                        queue: NSOperationQueue.mainQueue(),
+                        queue: OperationQueue.main,
                         completionHandler:{response, data, error in
                             let avatarPath :String = SANDBOXIMAGEPATH("avatar.jpg")
-                            data?.writeToFile(avatarPath, atomically: false);
-                            self.user.setObject(avatarPath, forKey: "UserAvatar")
-                            dispatch_async(dispatch_get_main_queue(),{
+                            try? data?.write(to: URL(fileURLWithPath: avatarPath), options: []);
+                            self.user.set(avatarPath, forKey: "UserAvatar")
+                            DispatchQueue.main.async(execute: {
                                 cell.profileImg.image = SANDBOXIMAGE("avatar.jpg")
                             })
                     }) 
@@ -129,49 +129,49 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
             }
             return cell
             
-        }else if (indexPath.section == 1){
+        }else if ((indexPath as NSIndexPath).section == 1){
             
-            let cell : MainCell = tableView.dequeueReusableCellWithIdentifier("mainCell", forIndexPath: indexPath) as! MainCell
+            let cell : MainCell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! MainCell
             
             cell.bundleLable.text = "点击绑定"
-            cell.iconImg.image = UIImage(named:iconArray[indexPath.row])
-            cell.nameLable.text = nameArray[indexPath.row]
+            cell.iconImg.image = UIImage(named:iconArray[(indexPath as NSIndexPath).row])
+            cell.nameLable.text = nameArray[(indexPath as NSIndexPath).row]
             
-            if(indexPath.row == 1 && SuperID.sharedInstance().isAppAuth()){
+            if((indexPath as NSIndexPath).row == 1 && SuperID.sharedInstance().isAppAuth()){
                 cell.bundleLable.text = "解除绑定"
                 cell.iconImg.image = UIImage(named:"superid_demo_binding_superid_ico_normal")
             }
             
             return cell
             
-        }else if (indexPath.section == 2){
-            let cell : MainCell = tableView.dequeueReusableCellWithIdentifier("mainCell", forIndexPath: indexPath) as! MainCell
-            cell.nameLable.text = functionArray[indexPath.row]
+        }else if ((indexPath as NSIndexPath).section == 2){
+            let cell : MainCell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath) as! MainCell
+            cell.nameLable.text = functionArray[(indexPath as NSIndexPath).row]
             cell.bundleLable.text = "点击体验"
             
             return cell
         
         }else{
-            let cell : LogoutCell = tableView.dequeueReusableCellWithIdentifier("logoutCell", forIndexPath: indexPath) as! LogoutCell
+            let cell : LogoutCell = tableView.dequeueReusableCell(withIdentifier: "logoutCell", for: indexPath) as! LogoutCell
             
             return cell
         }
 
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if (indexPath.section == 0) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if ((indexPath as NSIndexPath).section == 0) {
             
-            let cell : ProfileCell = tableView.cellForRowAtIndexPath(indexPath) as! ProfileCell
-            cell.selected = false
+            let cell : ProfileCell = tableView.cellForRow(at: indexPath) as! ProfileCell
+            cell.isSelected = false
             
             
-        }else if (indexPath.section == 1){
+        }else if ((indexPath as NSIndexPath).section == 1){
             
-            let cell : MainCell = tableView.cellForRowAtIndexPath(indexPath) as! MainCell
-            cell.selected = false
+            let cell : MainCell = tableView.cellForRow(at: indexPath) as! MainCell
+            cell.isSelected = false
             
-            if(indexPath.row == 1){
+            if((indexPath as NSIndexPath).row == 1){
                 if(SuperID.sharedInstance().isAppAuth()){
                     hud.mode = MBProgressHUDModeIndeterminate
                     hud.show(true)
@@ -183,16 +183,16 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
                     let appUserInfo : Dictionary<String,String>! = ["name":"Yourtion","email":"yourtion@gmail.com","avatar":""]
                     var dateNow : String {
                     get {
-                            return "\(NSDate().timeIntervalSince1970 * 1000)"
+                            return "\(Date().timeIntervalSince1970 * 1000)"
                         }
                     }
                     let phone : String! = nil
                     
                     let SuperID_AuthView: AnyObject!
                     do {
-                        SuperID_AuthView = try SuperID.sharedInstance().obtainLoginViewControllerWithPhoneNumber(phone, appUserInfo: appUserInfo)
+                        SuperID_AuthView = try SuperID.sharedInstance().obtainLoginViewController(withPhoneNumber: phone, appUserInfo: appUserInfo)
                         if (SuperID_AuthView != nil){
-                            self.presentViewController(SuperID_AuthView as! UIViewController, animated: true, completion: nil)
+                            self.present(SuperID_AuthView as! UIViewController, animated: true, completion: nil)
                         }
                     } catch let error as NSError {
                         print("AuthView Error = \(error.code) : \(error.localizedDescription)")
@@ -201,17 +201,17 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
                 }
             }
             
-        }else if (indexPath.section == 2){
-            let cell : MainCell = tableView.cellForRowAtIndexPath(indexPath) as! MainCell
-            cell.selected = false
+        }else if ((indexPath as NSIndexPath).section == 2){
+            let cell : MainCell = tableView.cellForRow(at: indexPath) as! MainCell
+            cell.isSelected = false
             
-            if(indexPath.row == 0){
+            if((indexPath as NSIndexPath).row == 0){
                 
                 let SuperID_FaceFeature: AnyObject!
                 do {
                     SuperID_FaceFeature = try SuperID.sharedInstance().obtainFaceFeatureViewController()
                     if (SuperID_FaceFeature != nil){
-                        self.presentViewController(SuperID_FaceFeature as! UIViewController, animated: true, completion: nil)
+                        self.present(SuperID_FaceFeature as! UIViewController, animated: true, completion: nil)
                     }
                 } catch let error as NSError {
                     print("FaceFeature Error = \(error.code) : \(error.localizedDescription)")
@@ -219,18 +219,18 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
 
             }
             
-            if(indexPath.row == 1){
-                self.performSegueWithIdentifier("ShowAdvanceFaceInfo", sender: self)
+            if((indexPath as NSIndexPath).row == 1){
+                self.performSegue(withIdentifier: "ShowAdvanceFaceInfo", sender: self)
             }
             
         }else{
             // SuperID.sharedInstance().appUserLogoutCurrentAccount()
-            self.navigationController?.popViewControllerAnimated(true)
+            self.navigationController?.popViewController(animated: true)
         }
     }
 
     
-    func superID(sender: SuperID!, userDidFinishAuthAppWithUserInfo userInfo: [NSObject : AnyObject]!, withAppUid uid: String!) {
+    func superID(_ sender: SuperID!, userDidFinishAuthAppWithUserInfo userInfo: [AnyHashable: Any]!, withAppUid uid: String!) {
         print("Succeed !")
         receiveData = nil
         receiveData = userInfo as! Dictionary<String, AnyObject>
@@ -241,22 +241,22 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
     }
     
     
-    func superID(sender: SuperID!, userAuthAppFail error: NSError!) {
+    func superID(_ sender: SuperID!, userAuthAppFail error: NSError!) {
         print("Fail !")
         hud.mode = MBProgressHUDModeText
         hud.labelText = "绑定失败"
         hud.hide(true, afterDelay: 0.5)
     }
     
-    func superID(sender: SuperID!, userDidFinishCancelAuthorization error: NSError!) {
+    func superID(_ sender: SuperID!, userDidFinishCancelAuthorization error: NSError!) {
         if((error) != nil){
             hud.mode = MBProgressHUDModeText
             hud.labelText = "解绑失败"
             hud.hide(true, afterDelay: 0.5)
             print("CancelAuthorization Fail \(error.code) : \(error.localizedDescription)")
         }else{
-            user.removeObjectForKey("UserInfo")
-            user.removeObjectForKey("UserAvatar")
+            user.removeObject(forKey: "UserInfo")
+            user.removeObject(forKey: "UserAvatar")
             receiveData = nil
             tableView.reloadData()
             hud.mode = MBProgressHUDModeText
@@ -266,8 +266,8 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
         }
     }
     
-    func receieveNetWorkError(sender: SuperID!) {
-        if (hud != nil && !hud.hidden){
+    func receieveNetWorkError(_ sender: SuperID!) {
+        if (hud != nil && !hud.isHidden){
             hud.mode = MBProgressHUDModeText
             hud.labelText = "网络错误"
             hud.hide(true, afterDelay: 0.5)
@@ -275,17 +275,17 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
         }
     }
     
-    func superID(sender: SuperID!, userDidFinishGetFaceFeatureWithFeatureInfo featureInfo: [NSObject : AnyObject]!, error: NSError!) {
+    func superID(_ sender: SuperID!, userDidFinishGetFaceFeatureWithFeatureInfo featureInfo: [AnyHashable: Any]!, error: NSError!) {
         if((error) != nil){
             print("GetFaceFeature Error = \(error.code) : \(error.localizedDescription)")
         }else{
-            self.performSegueWithIdentifier("ShowFaceInfo", sender: featureInfo)
+            self.performSegue(withIdentifier: "ShowFaceInfo", sender: featureInfo)
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "ShowFaceInfo") {
-            let faceInfoView : FaceInfoController = segue.destinationViewController as! FaceInfoController
+            let faceInfoView : FaceInfoController = segue.destination as! FaceInfoController
             if((sender) != nil){
                 faceInfoView.receiveData = sender as! [String: AnyObject]
             }
