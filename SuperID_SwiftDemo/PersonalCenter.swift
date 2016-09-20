@@ -137,7 +137,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
             cell.iconImg.image = UIImage(named:iconArray[(indexPath as NSIndexPath).row])
             cell.nameLable.text = nameArray[(indexPath as NSIndexPath).row]
             
-            if((indexPath as NSIndexPath).row == 1 && SuperID.sharedInstance().isAppAuth()){
+            if((indexPath as NSIndexPath).row == 1){
                 cell.bundleLable.text = "解除绑定"
                 cell.iconImg.image = UIImage(named:"superid_demo_binding_superid_ico_normal")
             }
@@ -172,33 +172,9 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
             cell.isSelected = false
             
             if((indexPath as NSIndexPath).row == 1){
-                if(SuperID.sharedInstance().isAppAuth()){
-                    hud.mode = MBProgressHUDModeIndeterminate
-                    hud.show(true)
-                    SuperID.sharedInstance().userCancelAuthorization()
-
-                }else{
-                    
-                    //生成用户个人账户信息的字典：其中key：name，email，avatar这三项需跟demo所示一致：
-                    let appUserInfo : Dictionary<String,String>! = ["name":"Yourtion","email":"yourtion@gmail.com","avatar":""]
-                    var dateNow : String {
-                    get {
-                            return "\(Date().timeIntervalSince1970 * 1000)"
-                        }
-                    }
-                    let phone : String! = nil
-                    
-                    let SuperID_AuthView: AnyObject!
-                    do {
-                        SuperID_AuthView = try SuperID.sharedInstance().obtainLoginViewController(withPhoneNumber: phone, appUserInfo: appUserInfo)
-                        if (SuperID_AuthView != nil){
-                            self.present(SuperID_AuthView as! UIViewController, animated: true, completion: nil)
-                        }
-                    } catch let error as NSError {
-                        print("AuthView Error = \(error.code) : \(error.localizedDescription)")
-                    }
-
-                }
+                hud.mode = MBProgressHUDModeIndeterminate
+                hud.show(true)
+                SuperID.sharedInstance().userCancelAuthorization()
             }
             
         }else if ((indexPath as NSIndexPath).section == 2){
@@ -225,7 +201,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
             
         }else{
             // SuperID.sharedInstance().appUserLogoutCurrentAccount()
-            self.navigationController?.popViewController(animated: true)
+            _ = self.navigationController?.popViewController(animated: true)
         }
     }
 
@@ -248,12 +224,12 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
         hud.hide(true, afterDelay: 0.5)
     }
     
-    func superID(_ sender: SuperID!, userDidFinishCancelAuthorization error: NSError!) {
+    func superID(_ sender: SuperID!, userDidFinishCancelAuthorization error: Error!) {
         if((error) != nil){
             hud.mode = MBProgressHUDModeText
             hud.labelText = "解绑失败"
             hud.hide(true, afterDelay: 0.5)
-            print("CancelAuthorization Fail \(error.code) : \(error.localizedDescription)")
+            print("CancelAuthorization Fail \(error._code) : \(error.localizedDescription)")
         }else{
             user.removeObject(forKey: "UserInfo")
             user.removeObject(forKey: "UserAvatar")
@@ -275,9 +251,9 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
         }
     }
     
-    func superID(_ sender: SuperID!, userDidFinishGetFaceFeatureWithFeatureInfo featureInfo: [AnyHashable: Any]!, error: NSError!) {
+    func superID(_ sender: SuperID!, userDidFinishGetFaceFeatureWithFeatureInfo featureInfo: [AnyHashable: Any]!, error: Error!) {
         if((error) != nil){
-            print("GetFaceFeature Error = \(error.code) : \(error.localizedDescription)")
+            print("GetFaceFeature Error = \(error._code) : \(error.localizedDescription)")
         }else{
             self.performSegue(withIdentifier: "ShowFaceInfo", sender: featureInfo)
         }

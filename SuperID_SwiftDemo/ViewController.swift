@@ -91,7 +91,7 @@ class ViewController: UIViewController ,SuperIDDelegate {
         
     }
     
-    func initTextFild(_ textField: UITextField) ->UITextField{
+    func initTextFild(_ textField: UITextField) {
         
         textField.backgroundColor = UIColor.white
         textField.keyboardAppearance = UIKeyboardAppearance.light
@@ -103,8 +103,6 @@ class ViewController: UIViewController ,SuperIDDelegate {
         textField.clipsToBounds = true
         textField.layer.borderWidth = 0.5
         textField.layer.borderColor = Superid_Demo_Border.cgColor
-    
-        return textField;
     }
 }
 
