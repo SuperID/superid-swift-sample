@@ -57,5 +57,5 @@ $(PROJECT_DIR)/SuperID_SDK/libSuperIDSDK.a
 <string>SuperID需要访问你的摄像头</string>
 ```
 
-![](ScreenShot/iOS10.png)
+![](ScreenShot/ios10.png)
 
