@@ -9,9 +9,8 @@
 #ifndef SuperID_SwiftDemo_SuperIDSDK_Bridging_Header_h
 #define SuperID_SwiftDemo_SuperIDSDK_Bridging_Header_h
 
-#import "SuperID.h"
-#import "SuperIDDelegate.h"
-#import "SIDFaceFeatureViewController.h"
+#import "SIDHeader.h"
+
 #import "MBProgressHUD.h"
 
 #endif

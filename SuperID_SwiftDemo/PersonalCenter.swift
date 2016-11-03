@@ -46,7 +46,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
         self.navigationItem.title = "个人中心";
         tableView.delegate = self
         tableView.dataSource = self
-        SuperID.sharedInstance().delegate = self
+        SuperID.setupSuperIDDelegate(self)
         user = UserDefaults.standard
         let userInfos : Dictionary? = user.object(forKey: "UserInfo") as? Dictionary<String,AnyObject>
         if ((userInfos) != nil){
@@ -174,7 +174,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
             if((indexPath as NSIndexPath).row == 1){
                 hud.mode = MBProgressHUDModeIndeterminate
                 hud.show(true)
-                SuperID.sharedInstance().userCancelAuthorization()
+                SuperID.userCancelAuthorization()
             }
             
         }else if ((indexPath as NSIndexPath).section == 2){
@@ -185,7 +185,7 @@ class PersonalCenter : UIViewController, SuperIDDelegate, UITableViewDelegate,UI
                 
                 let SuperID_FaceFeature: AnyObject!
                 do {
-                    SuperID_FaceFeature = try SuperID.sharedInstance().obtainFaceFeatureViewController()
+                    SuperID_FaceFeature = try SuperID.obtainFaceFeatureViewController()
                     if (SuperID_FaceFeature != nil){
                         self.present(SuperID_FaceFeature as! UIViewController, animated: true, completion: nil)
                     }

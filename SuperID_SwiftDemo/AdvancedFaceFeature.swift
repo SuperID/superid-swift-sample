@@ -13,9 +13,12 @@ class AdvancedFaceFeature : SIDFaceFeatureViewController {
     @IBOutlet weak var startFaceFeature: UIButton!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.navigationItem.title = "自定义人脸界面"
         
-        self.configureFaceFeatureView(withDuration: 10.0, withFrameWidth: 320.0, high: 320.0);
+        let preview = SIDCameraPreviewView()
+        setupFaceFeatureManager(withPreview: preview)
+        
         self.view.backgroundColor = UIColor.black;
         
         if(hud == nil){
@@ -33,6 +36,11 @@ class AdvancedFaceFeature : SIDFaceFeatureViewController {
         hud.labelText = "人脸信息获取中"
         hud.show(true)
     }
+    
+    override func didFinishDetectFace() {
+        print("Face")
+    }
+    
     
     override func getFaceFeatureSucceed(withFeatureInfo featureInfo: [AnyHashable: Any]!) {
         print("获取人脸表情成功\(featureInfo)")

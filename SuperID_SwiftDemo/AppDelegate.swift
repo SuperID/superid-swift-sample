@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         SuperID.setDebugMode(true)
-        SuperID.sharedInstance().registerApp(withAppID: "uzg0FeGn3Gorlvt9idslH5KY", withAppSecret: "aPLQLRSglDvKttClUmWvsjNE")
+        SuperID.registerApp(withAppID: "uzg0FeGn3Gorlvt9idslH5KY", withAppSecret: "aPLQLRSglDvKttClUmWvsjNE")
         return true
     }
 

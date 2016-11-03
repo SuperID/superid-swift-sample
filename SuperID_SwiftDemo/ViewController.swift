@@ -23,14 +23,14 @@ class ViewController: UIViewController ,SuperIDDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        SuperID.sharedInstance().delegate = self;
+        SuperID.setupSuperIDDelegate(self)
     }
 
     @IBAction func SuperIDBtn(_ sender: AnyObject) {
         
         let SuperID_LoginView: AnyObject!
         do {
-            SuperID_LoginView = try SuperID.sharedInstance().obtainLoginViewController()
+            SuperID_LoginView = try SuperID.obtainLoginViewController(with: nil)
             if (SuperID_LoginView != nil){
                 self.present(SuperID_LoginView as! UIViewController, animated: true, completion: nil)
             }
@@ -43,7 +43,7 @@ class ViewController: UIViewController ,SuperIDDelegate {
         self.performSegue(withIdentifier: "ShowPerson", sender: nil)
     }
     
-    func superID(_ sender: SuperID!, userDidFinishLoginWithUserInfo userInfo: [AnyHashable: Any]!, withOpenId openId: String!, error: Error!) {
+    @objc(superID:userDidFinishLoginWithUserInfo:openId:error:) func superID(_ sender: SuperID!, userDidFinishLoginWithUserInfo userInfo: [AnyHashable: Any]!, openId: String!, error: Error!) {
         print("Login Done : \(userInfo) and \(openId)")
         self.performSegue(withIdentifier: "ShowPerson", sender: userInfo)
     }
