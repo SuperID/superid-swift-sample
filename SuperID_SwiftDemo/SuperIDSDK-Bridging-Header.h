@@ -11,6 +11,4 @@
 
 #import "SIDHeader.h"
 
-#import "MBProgressHUD.h"
-
 #endif
