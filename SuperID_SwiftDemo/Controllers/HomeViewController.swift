@@ -19,8 +19,7 @@ class HomeViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            print(login)
-        self.navigationItem.title = "一登SDK功能列表"
+        self.navigationItem.title = "一登SDK"
     }
     
     // MARK: - SuperIDDelegate
@@ -46,7 +45,7 @@ class HomeViewController: UITableViewController {
         })
     }
     
-    ///人脸表情
+    /// 人脸表情
     func faceEmotion()  {
         SIDCoreLoginKit.showFaceFeatureViewController(responseBlock: {
             (result:[AnyHashable : Any]?, error:Error?) -> Void in
@@ -145,19 +144,30 @@ class HomeViewController: UITableViewController {
             switch indexPath.row {
             case 0:
                 self.superIDLogin()
+                break
             case 1:
                 self.faceEmotion()
+                break
             case 2:
                 self.faceVerify()
+                break
             case 3:
                 self.relieveBinding()
+                break
             case 4:
                 self.quitSuperIDLogin()
+                break
             default:
                 return
             }
         } else {
-            
+            switch indexPath.row {
+            case 0:
+                self.navigationController?.pushViewController(CustomFaceFeatureVC(), animated: true)
+                break
+            default:
+                return
+            }
         }
     }
 

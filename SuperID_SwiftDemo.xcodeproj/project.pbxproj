@@ -18,6 +18,8 @@
 		CBA4371F1DCB2F500051BF4A /* SuperIDSDKSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CBA4371D1DCB2F4F0051BF4A /* SuperIDSDKSettings.bundle */; };
 		CBBD2B141DCB3F6D00DEF60F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBD2B131DCB3F6D00DEF60F /* HomeViewController.swift */; };
 		CBBD2B171DCB423300DEF60F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBD2B161DCB423300DEF60F /* Main.storyboard */; };
+		CBBD2B1C1DCC295400DEF60F /* CustomFaceFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBD2B1A1DCC295400DEF60F /* CustomFaceFeatureVC.swift */; };
+		CBBD2B1D1DCC295400DEF60F /* CustomFaceFeatureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBD2B1B1DCC295400DEF60F /* CustomFaceFeatureVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		CBA4371D1DCB2F4F0051BF4A /* SuperIDSDKSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SuperIDSDKSettings.bundle; sourceTree = "<group>"; };
 		CBBD2B131DCB3F6D00DEF60F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = SuperID_SwiftDemo/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		CBBD2B161DCB423300DEF60F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = SuperID_SwiftDemo/Main.storyboard; sourceTree = "<group>"; };
+		CBBD2B1A1DCC295400DEF60F /* CustomFaceFeatureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFaceFeatureVC.swift; path = SuperID_SwiftDemo/Controllers/CustomFaceFeatureVC.swift; sourceTree = "<group>"; };
+		CBBD2B1B1DCC295400DEF60F /* CustomFaceFeatureVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomFaceFeatureVC.xib; path = SuperID_SwiftDemo/Controllers/CustomFaceFeatureVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				CBBD2B131DCB3F6D00DEF60F /* HomeViewController.swift */,
+				CBBD2B1A1DCC295400DEF60F /* CustomFaceFeatureVC.swift */,
+				CBBD2B1B1DCC295400DEF60F /* CustomFaceFeatureVC.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 				CBBD2B171DCB423300DEF60F /* Main.storyboard in Resources */,
 				CBA4371F1DCB2F500051BF4A /* SuperIDSDKSettings.bundle in Resources */,
 				CB14D5601A7B58450065EFD7 /* Images.xcassets in Resources */,
+				CBBD2B1D1DCC295400DEF60F /* CustomFaceFeatureVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB14D6241A7B82530065EFD7 /* CONFIG.swift in Sources */,
+				CBBD2B1C1DCC295400DEF60F /* CustomFaceFeatureVC.swift in Sources */,
 				CBBD2B141DCB3F6D00DEF60F /* HomeViewController.swift in Sources */,
 				CB1E1D531A8072000085C939 /* MacroDefinition.swift in Sources */,
 				CB14D5591A7B58450065EFD7 /* AppDelegate.swift in Sources */,

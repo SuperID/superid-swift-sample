@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomFaceFeatureVC" customModule="SuperID_SwiftDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="preView" destination="lwZ-fx-YJX" id="9gH-5L-13j"/>
+                <outlet property="view" destination="6ga-OW-64y" id="dwJ-gi-5zf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6ga-OW-64y">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwZ-fx-YJX" customClass="SIDCameraPreviewView">
+                    <rect key="frame" x="68" y="174" width="240" height="320"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="320" id="69L-Fh-RLz"/>
+                        <constraint firstAttribute="width" constant="240" id="L2e-oZ-Sjl"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOH-NX-PL0">
+                    <rect key="frame" x="48" y="560" width="62" height="30"/>
+                    <state key="normal" title="开始检测"/>
+                    <connections>
+                        <action selector="start:" destination="-1" eventType="touchUpInside" id="gZP-lg-osV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpp-Nq-v2K">
+                    <rect key="frame" x="144" y="560" width="62" height="30"/>
+                    <state key="normal" title="停止检测"/>
+                    <connections>
+                        <action selector="stop:" destination="-1" eventType="touchUpInside" id="nj7-qU-heP"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHy-l9-uQ8">
+                    <rect key="frame" x="241" y="560" width="93" height="30"/>
+                    <state key="normal" title="隐藏视频view"/>
+                    <connections>
+                        <action selector="hiddenCameraView:" destination="-1" eventType="touchUpInside" id="cQZ-qc-Xvz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lwZ-fx-YJX" firstAttribute="centerX" secondItem="6ga-OW-64y" secondAttribute="centerX" id="77v-lx-koL"/>
+                <constraint firstItem="hpp-Nq-v2K" firstAttribute="top" secondItem="lwZ-fx-YJX" secondAttribute="bottom" constant="66" id="JtA-KW-Oaa"/>
+                <constraint firstItem="WOH-NX-PL0" firstAttribute="leading" secondItem="6ga-OW-64y" secondAttribute="leading" constant="48" id="MqQ-CE-i4G"/>
+                <constraint firstItem="lwZ-fx-YJX" firstAttribute="centerY" secondItem="6ga-OW-64y" secondAttribute="centerY" id="QGd-vj-zNh"/>
+                <constraint firstItem="WOH-NX-PL0" firstAttribute="top" secondItem="lwZ-fx-YJX" secondAttribute="bottom" constant="66" id="cf8-eG-Fyw"/>
+                <constraint firstItem="RHy-l9-uQ8" firstAttribute="top" secondItem="lwZ-fx-YJX" secondAttribute="bottom" constant="66" id="l03-Lp-aDU"/>
+                <constraint firstItem="hpp-Nq-v2K" firstAttribute="leading" secondItem="WOH-NX-PL0" secondAttribute="trailing" constant="34" id="tOh-vn-BTm"/>
+                <constraint firstItem="RHy-l9-uQ8" firstAttribute="leading" secondItem="hpp-Nq-v2K" secondAttribute="trailing" constant="35" id="xKs-dQ-cKo"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
