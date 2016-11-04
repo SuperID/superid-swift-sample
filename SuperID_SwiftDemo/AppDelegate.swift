@@ -16,13 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        //Step_1:  使用从一登官网创建的App应用获取到的AppID和AppSecret,注册一登SDK服务
+        /// Step_1:  使用从一登官网创建的App应用获取到的AppID和AppSecret,注册一登SDK服务
         SuperID.registerApp(withAppID: "uzg0FeGn3Gorlvt9idslH5KY", withAppSecret: "aPLQLRSglDvKttClUmWvsjNE")
         
-        //Step_2:  开启或关闭调试模式,YES开启调试模式,App在运行时,控制台会输出相应信息
+        /// Step_2:  开启或关闭调试模式,YES开启调试模式,App在运行时,控制台会输出相应信息
         SuperID.setDebugMode(true)
         
-        //Step_3:  设置一登SDK的展示的UI语言模式，默认为自动模式
+        /// Step_3:  设置一登SDK的展示的UI语言模式，默认为自动模式
         SuperID.setLanguageMode(.autoMode)
         
         return true
