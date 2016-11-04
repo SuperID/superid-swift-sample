@@ -19,7 +19,6 @@ class CustomSearchFaceVC: SIDSearchFaceViewController, SIDSearchFaceProtocol {
         self.navigationItem.title = "自定义人脸检索"
         /// Step_3:  设置预览视频view,三方可以根据自身业务,灵活设置此view的大小,也可以设置隐藏
         self.setupSearchFaceManager(withPreview: self.preView)
-        print(self.preView.frame)
     }
 
     // MARK: - SuperIDDelegate
