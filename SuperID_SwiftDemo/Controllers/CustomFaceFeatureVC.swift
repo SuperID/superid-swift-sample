@@ -21,7 +21,7 @@ class CustomFaceFeatureVC: SIDFaceFeatureViewController {
         self.setupFaceFeatureManager(withPreview: self.preView)
     }
 
-    // MARK : SuperIDDelegate
+    // MARK: - SuperIDDelegate
     /// Step_3: 重写下面三个方法,三方可以根据自身业务,灵活设计UI交互
     
     override func didFinishDetectFace() {

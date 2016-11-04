@@ -165,6 +165,9 @@ class HomeViewController: UITableViewController {
             case 0:
                 self.navigationController?.pushViewController(CustomFaceFeatureVC(), animated: true)
                 break
+            case 1:
+                self.navigationController?.pushViewController(CustomSearchFaceVC(), animated: true)
+                break
             default:
                 return
             }

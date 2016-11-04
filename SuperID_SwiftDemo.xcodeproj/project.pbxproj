@@ -20,6 +20,8 @@
 		CBBD2B171DCB423300DEF60F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBD2B161DCB423300DEF60F /* Main.storyboard */; };
 		CBBD2B1C1DCC295400DEF60F /* CustomFaceFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBD2B1A1DCC295400DEF60F /* CustomFaceFeatureVC.swift */; };
 		CBBD2B1D1DCC295400DEF60F /* CustomFaceFeatureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBD2B1B1DCC295400DEF60F /* CustomFaceFeatureVC.xib */; };
+		CBBD2B201DCC2EDA00DEF60F /* CustomSearchFaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBD2B1E1DCC2EDA00DEF60F /* CustomSearchFaceVC.swift */; };
+		CBBD2B211DCC2EDA00DEF60F /* CustomSearchFaceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBD2B1F1DCC2EDA00DEF60F /* CustomSearchFaceVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		CBBD2B161DCB423300DEF60F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = SuperID_SwiftDemo/Main.storyboard; sourceTree = "<group>"; };
 		CBBD2B1A1DCC295400DEF60F /* CustomFaceFeatureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFaceFeatureVC.swift; path = SuperID_SwiftDemo/Controllers/CustomFaceFeatureVC.swift; sourceTree = "<group>"; };
 		CBBD2B1B1DCC295400DEF60F /* CustomFaceFeatureVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomFaceFeatureVC.xib; path = SuperID_SwiftDemo/Controllers/CustomFaceFeatureVC.xib; sourceTree = "<group>"; };
+		CBBD2B1E1DCC2EDA00DEF60F /* CustomSearchFaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSearchFaceVC.swift; path = SuperID_SwiftDemo/Controllers/CustomSearchFaceVC.swift; sourceTree = "<group>"; };
+		CBBD2B1F1DCC2EDA00DEF60F /* CustomSearchFaceVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomSearchFaceVC.xib; path = SuperID_SwiftDemo/Controllers/CustomSearchFaceVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 				CBBD2B131DCB3F6D00DEF60F /* HomeViewController.swift */,
 				CBBD2B1A1DCC295400DEF60F /* CustomFaceFeatureVC.swift */,
 				CBBD2B1B1DCC295400DEF60F /* CustomFaceFeatureVC.xib */,
+				CBBD2B1E1DCC2EDA00DEF60F /* CustomSearchFaceVC.swift */,
+				CBBD2B1F1DCC2EDA00DEF60F /* CustomSearchFaceVC.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 				CBA4371F1DCB2F500051BF4A /* SuperIDSDKSettings.bundle in Resources */,
 				CB14D5601A7B58450065EFD7 /* Images.xcassets in Resources */,
 				CBBD2B1D1DCC295400DEF60F /* CustomFaceFeatureVC.xib in Resources */,
+				CBBD2B211DCC2EDA00DEF60F /* CustomSearchFaceVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBD2B201DCC2EDA00DEF60F /* CustomSearchFaceVC.swift in Sources */,
 				CB14D6241A7B82530065EFD7 /* CONFIG.swift in Sources */,
 				CBBD2B1C1DCC295400DEF60F /* CustomFaceFeatureVC.swift in Sources */,
 				CBBD2B141DCB3F6D00DEF60F /* HomeViewController.swift in Sources */,
