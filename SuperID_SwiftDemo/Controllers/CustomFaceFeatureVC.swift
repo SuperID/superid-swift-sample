@@ -19,6 +19,7 @@ class CustomFaceFeatureVC: SIDFaceFeatureViewController {
         /// Step_2:  设置预览视频view,三方可以根据自身业务,灵活设置此view的大小,也可以设置隐藏
         self.navigationItem.title = "自定义人脸属性"
         self.setupFaceFeatureManager(withPreview: self.preView)
+        print(self.preView.frame)
     }
 
     // MARK: - SuperIDDelegate
