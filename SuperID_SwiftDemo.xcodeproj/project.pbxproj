@@ -16,6 +16,8 @@
 		CB1E1D531A8072000085C939 /* MacroDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1E1D521A8072000085C939 /* MacroDefinition.swift */; };
 		CBA4371E1DCB2F4F0051BF4A /* libSuperIDSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA437121DCB2F4F0051BF4A /* libSuperIDSDK.a */; };
 		CBA4371F1DCB2F500051BF4A /* SuperIDSDKSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CBA4371D1DCB2F4F0051BF4A /* SuperIDSDKSettings.bundle */; };
+		CBBD2B141DCB3F6D00DEF60F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBD2B131DCB3F6D00DEF60F /* HomeViewController.swift */; };
+		CBBD2B171DCB423300DEF60F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBD2B161DCB423300DEF60F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		CBA4371B1DCB2F4F0051BF4A /* SuperID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperID.h; sourceTree = "<group>"; };
 		CBA4371C1DCB2F4F0051BF4A /* SuperIDDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperIDDelegate.h; sourceTree = "<group>"; };
 		CBA4371D1DCB2F4F0051BF4A /* SuperIDSDKSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SuperIDSDKSettings.bundle; sourceTree = "<group>"; };
+		CBBD2B131DCB3F6D00DEF60F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = SuperID_SwiftDemo/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
+		CBBD2B161DCB423300DEF60F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = SuperID_SwiftDemo/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +66,11 @@
 		CB14D54A1A7B58450065EFD7 = {
 			isa = PBXGroup;
 			children = (
+				CBBD2B161DCB423300DEF60F /* Main.storyboard */,
 				CBA437111DCB2F4F0051BF4A /* SuperID-SDK-iOS */,
-				CB14D6141A7B7CA60065EFD7 /* Frameworks */,
 				CB14D5551A7B58450065EFD7 /* SuperID_SwiftDemo */,
+				CBBD2B151DCB3F7500DEF60F /* Controllers */,
+				CB14D6141A7B7CA60065EFD7 /* Frameworks */,
 				CB14D5541A7B58450065EFD7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,6 +135,14 @@
 			path = "../../../TempFile/superid-ios-sdk/SuperID-SDK-iOS";
 			sourceTree = "<group>";
 		};
+		CBBD2B151DCB3F7500DEF60F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CBBD2B131DCB3F6D00DEF60F /* HomeViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBD2B171DCB423300DEF60F /* Main.storyboard in Resources */,
 				CBA4371F1DCB2F500051BF4A /* SuperIDSDKSettings.bundle in Resources */,
 				CB14D5601A7B58450065EFD7 /* Images.xcassets in Resources */,
 			);
@@ -203,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB14D6241A7B82530065EFD7 /* CONFIG.swift in Sources */,
+				CBBD2B141DCB3F6D00DEF60F /* HomeViewController.swift in Sources */,
 				CB1E1D531A8072000085C939 /* MacroDefinition.swift in Sources */,
 				CB14D5591A7B58450065EFD7 /* AppDelegate.swift in Sources */,
 			);
@@ -300,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -330,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
